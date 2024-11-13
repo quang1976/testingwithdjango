@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here. 222222222 1
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    author = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255)
+
+    def __str__(self):
+        return self.title
